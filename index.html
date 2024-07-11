@@ -3,9 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Movie Watchlist</title>
   </head>
   <body>
-    <h1>Movie Watchlist</h1>
+    <header class="header">
+      <h1 class="main-title">Movie Watchlist</h1>
+      <div class="container">
+        <div class="header-contents">
+          <h2>Find Your film</h2>
+          <a href="watchlist.html">My Watchist</a>
+        </div>
+      </div>
+    </header>
+    <section class="search-bar">
+      <div class="search-bar-control">
+        <input type="text" placeholder="Blade Runner" />
+        <button class="search-btn">Search</button>
+      </div>
+    </section>
+    <section class="movie-list">
+      <div class="placeholder-movie">
+        <img src="images/start-exploring.png" alt="" />
+        <p>Start Exploring</p>
+      </div>
+      <!-- <div class="movie-list-container">
+        <div class="movie-list-contents">
+          <div class="movie-list-item">
+            
+          </div>
+        </div>
+      </div> -->
+    </section>
   </body>
 </html>
