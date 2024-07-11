@@ -86,8 +86,35 @@ h1 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 50vh;
+  min-height: 50vh;
 }
 .placeholder-movie p {
   color: #2e2e2f;
+}
+.watch-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* height: max-content; */
+  min-height: 50vh;
+}
+.watch-list p:nth-child(1) {
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0;
+  color: #787878;
+}
+.add-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+.add-content img {
+  margin-top: 0.15em;
+}
+.add-icon {
+  margin-right: 0.35em;
 }
