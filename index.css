@@ -46,7 +46,16 @@ h1 {
   padding: 3em 0;
 }
 /* ----------------------------------------------------------------------- */
-
+.search-box {
+  display: flex;
+  align-items: center;
+  background-color: #2e2e2e;
+  border-radius: 5px;
+  padding-left: 0.25em;
+}
+.search-box img {
+  width: 20px;
+}
 .search-bar-control {
   display: flex;
   justify-content: center;
@@ -66,6 +75,8 @@ h1 {
   border: none;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  flex: 1;
+  outline: none;
 }
 .search-btn {
   background-color: #4b4b4b;
