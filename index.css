@@ -129,3 +129,79 @@ h1 {
 .add-icon {
   margin-right: 0.35em;
 }
+.movie-list-container,
+.movie-about,
+.add-watchlist,
+.movie-name,
+.movie-list-contents {
+  display: flex;
+}
+.movie-list-container {
+  width: 90%;
+  margin: 0 auto;
+}
+.movie-poster {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-poster img {
+  max-width: 100%;
+}
+.movie-list-contents {
+  flex-direction: column;
+}
+.movie-name {
+  align-items: center;
+  justify-content: space-between;
+}
+.movie-name h3 {
+  /* margin-right: 0.5em; */
+  margin-bottom: 0;
+}
+
+.movie-rating {
+  display: flex;
+  align-items: center;
+}
+.movie-rating img {
+  margin-right: 0.4em;
+  margin-top: 1em;
+}
+.movie-rating p {
+  margin-top: 1em;
+  margin-bottom: 0;
+}
+.movie-details {
+  display: flex;
+  justify-content: space-around;
+}
+.movie-details p {
+  margin-bottom: 0;
+}
+
+.add-watchlist {
+  align-items: center;
+  gap: 0.25em;
+  border: 2px solid wheat;
+  flex: 1;
+  justify-content: center;
+}
+.add-watchlist button {
+  padding: 1em;
+  border: none;
+  background-color: #121212;
+  color: white;
+  font-weight: 700;
+  font-size: 1.25rem;
+  flex: 1;
+}
+.add-watchlist button:hover,
+.add-watchlist button:focus-visible {
+  background-color: white;
+  color: black;
+}
+.movie-about {
+  flex-direction: column;
+  align-items: center;
+}
