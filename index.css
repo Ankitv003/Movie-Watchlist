@@ -195,6 +195,7 @@ h1 {
   font-weight: 700;
   font-size: 1.25rem;
   flex: 1;
+  cursor: pointer;
 }
 .add-watchlist button:hover,
 .add-watchlist button:focus-visible {
@@ -217,4 +218,13 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.added-text {
+  font-style: italic;
+  background-color: white;
+  color: #121212;
+  padding: 1em;
+  font-weight: 700;
+  border-radius: 5px;
 }
