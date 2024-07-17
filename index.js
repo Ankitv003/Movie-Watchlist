@@ -137,35 +137,20 @@ async function searchDatabase() {
                 <div class="movie-list-contents">
                   <div class="movie-name">
                     <h3>${movieData.Title}</h3>
-                    ${
-                      movieData.imdbRating && movieData.imdbRating !== "N/A"
-                        ? `
                     <div class="movie-rating">
                       <img src="images/imdb-rating.png" alt="star-rating" />
                       <p>${movieData.imdbRating}</p>
-                    </div>`
-                        : ""
-                    }
+                    </div>
                   </div>
                   <div class="movie-details">
-                    ${
-                      movieData.Runtime && movieData.Runtime !== "N/A"
-                        ? `<p>${movieData.Runtime}</p>`
-                        : ""
-                    }
-                    ${
-                      movieData.Genre && movieData.Genre !== "N/A"
-                        ? `<p>${movieData.Genre}</p>`
-                        : ""
-                    }
+                        <p>${movieData.Runtime}</p>
+                        <p>${movieData.Genre}</p>
                   </div>
                   <div class="movie-about">
                     <p>${movieData.Plot}</p>
                   </div>
                   <div class="add-watchlist">
-                    <button class="add-watchlist-btn" data-id="${
-                      movieData.imdbID
-                    }">Add to watchlist</button>
+                    <button class="add-watchlist-btn" data-id="${movieData.imdbID}">Add to watchlist</button>
                   </div>
                 </div>
               </div>
@@ -176,12 +161,12 @@ async function searchDatabase() {
       });
 
       if (!anyMovieDisplayed) {
-        movieList.innerHTML = `<p class="data-error">Unable to find what you're looking for. Please be specific and try another search.</p>`;
+        movieList.innerHTML = `<p class="data-error">Unable to find what you're looking for.<br> Please be specific and try another search.</p>`;
       }
 
       configureWatchlistButtons(); // Configure the watchlist buttons after the list is updated
     } else {
-      movieList.innerHTML = `<p class="data-error">Unable to find what you're looking for. Please be specific and try another search.</p>`;
+      movieList.innerHTML = `<p class="data-error">Unable to find what you're looking for.<br> Please be specific and try another search.</p>`;
     }
   } catch (error) {
     console.error("Error fetching data:", error);
@@ -190,6 +175,10 @@ async function searchDatabase() {
 
   inputEl.value = "";
 }
+
+document
+  .querySelector(".add-watchlist-btn")
+  .addEventListener("click", configureWatchlistButtons);
 
 function configureWatchlistButtons() {
   const watchlistButtons = document.querySelectorAll(".add-watchlist-btn");
@@ -203,12 +192,28 @@ function addToWatchlist(event) {
   const movieItem = document.querySelector(`.movie-item[data-id="${movieId}"]`);
   const movieTitle = movieItem.querySelector(".movie-name h3").innerText;
   const moviePoster = movieItem.querySelector(".movie-poster img").src;
+  const movieRating = movieItem.querySelector(".movie-rating p").innerText;
+  const movieRuntime = movieItem.querySelector(
+    ".movie-details p:nth-child(1)"
+  ).innerText;
+  const movieGenre = movieItem.querySelector(
+    ".movie-details p:nth-child(2)"
+  ).innerText;
+  const moviePlot = movieItem.querySelector(".movie-about p").innerText;
 
   console.log(`Adding to watchlist: ${movieTitle}`);
 
   // Add the movie to the watchlist (you can store it in localStorage or send it to a backend server)
   let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-  watchlist.push({ id: movieId, title: movieTitle, poster: moviePoster });
+  watchlist.push({
+    id: movieId,
+    title: movieTitle,
+    poster: moviePoster,
+    plot: moviePlot,
+    runtime: movieRuntime,
+    genre: movieGenre,
+    imdbRating: movieRating,
+  });
   localStorage.setItem("watchlist", JSON.stringify(watchlist));
 
   // Replace the button with a text element

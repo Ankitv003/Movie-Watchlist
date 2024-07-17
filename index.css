@@ -102,14 +102,13 @@ h1 {
 .placeholder-movie p {
   color: #2e2e2f;
 }
-.watch-list {
+.watchlist-placeholder {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* height: max-content; */
   min-height: 50vh;
 }
-.watch-list p:nth-child(1) {
+.watchlist-placeholder p:nth-child(1) {
   text-align: center;
   font-size: 1.1rem;
   font-weight: 700;
@@ -133,7 +132,8 @@ h1 {
 .movie-about,
 .add-watchlist,
 .movie-name,
-.movie-list-contents {
+.movie-list-contents,
+.remove-watchlist {
   display: flex;
 }
 .movie-list-container {
@@ -180,14 +180,16 @@ h1 {
   margin-bottom: 0;
 }
 
-.add-watchlist {
+.add-watchlist,
+.remove-watchlist {
   align-items: center;
   gap: 0.25em;
   border: 2px solid wheat;
   flex: 1;
   justify-content: center;
 }
-.add-watchlist button {
+.add-watchlist button,
+.remove-watchlist button {
   padding: 1em;
   border: none;
   background-color: #121212;
@@ -198,7 +200,9 @@ h1 {
   cursor: pointer;
 }
 .add-watchlist button:hover,
-.add-watchlist button:focus-visible {
+.add-watchlist button:focus-visible,
+.remove-watchlist button:hover,
+.remove-watchlist button:focus-visible {
   background-color: white;
   color: black;
 }
