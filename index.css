@@ -246,3 +246,42 @@ hr {
   background: #121212;
   z-index: 1000;
 }
+
+@media (min-width: 600px) {
+  .movie-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+  }
+  .movie-list-contents {
+    flex-direction: row;
+  }
+  .movie-poster {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .movie-poster img {
+    max-width: 100%;
+  }
+  .movie-list-container,
+  .movie-about,
+  .add-watchlist,
+  .movie-name,
+  .movie-list-contents,
+  .remove-watchlist {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .movie-poster {
+    width: 50%;
+  }
+  .movie-list-container {
+    width: 50%;
+  }
+  hr {
+    padding: 2em;
+  }
+}
