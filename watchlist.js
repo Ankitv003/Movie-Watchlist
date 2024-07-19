@@ -16,9 +16,11 @@ document.addEventListener("DOMContentLoaded", function () {
       `;
   } else {
     watchListSection.innerHTML = "";
-    watchlist.forEach((movie) => {
+    watchlist.forEach((movie, index) => {
       watchListSection.innerHTML += `
-        <div class="movie-item" data-id="${movie.id}">
+        <div class="movie-item ${
+          index === watchlist.length - 1 ? "last-movie-item" : ""
+        }" data-id="${movie.id}">
           <div class="movie-poster">
             <img src="${movie.poster}" alt="movie-poster" />
           </div>
@@ -39,12 +41,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 <p>${movie.plot}</p>
               </div>
               <div class="remove-watchlist">
-                  <button class="remove-watchlist-btn" data-id="${movie.id}">Remove from watchlist</button>
+                  <button class="remove-watchlist-btn" data-id="${
+                    movie.id
+                  }">Remove from watchlist</button>
               </div>
             </div>
           </div>
-          <hr>
+      
         </div>
+            <hr>
       `;
     });
 

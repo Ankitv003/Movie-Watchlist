@@ -88,7 +88,7 @@ h1 {
   border-radius: 5px;
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
-  width: 25%;
+  width: 20%;
   justify-content: center;
 }
 
@@ -246,7 +246,26 @@ hr {
   background: #121212;
   z-index: 1000;
 }
+.watch-list hr:last-child {
+  display: none;
+}
 
+.movie-list hr:last-child {
+  display: none;
+}
+.movie-item:first-child {
+  margin-top: 2em;
+}
+.movie-item.last-movie-item {
+  margin-bottom: 2em;
+}
+/* .movie-item:last-child {
+  padding: 2em;
+} */
+
+/* .watch-list div:last-child {
+  margin-bottom: 1em;
+} */
 @media (min-width: 600px) {
   .movie-item {
     display: flex;
@@ -268,11 +287,13 @@ hr {
   .movie-list-container,
   .movie-about,
   .add-watchlist,
-  .movie-name,
   .movie-list-contents,
   .remove-watchlist {
     display: flex;
     flex-direction: column;
+  }
+  .movie-name {
+    justify-content: space-around;
   }
 
   .movie-poster {
@@ -281,7 +302,23 @@ hr {
   .movie-list-container {
     width: 50%;
   }
-  hr {
-    padding: 2em;
+
+  .add-watchlist-btn {
+    width: 80%;
+  }
+  .search-box {
+    width: 60%;
+  }
+  .search-bar-control {
+    position: relative;
+    left: 80px;
+    width: 90%;
+  }
+  .search-bar-control input {
+    width: 60%;
+    flex: 1;
+  }
+  .search-btn {
+    width: 20%;
   }
 }

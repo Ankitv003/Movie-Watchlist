@@ -288,8 +288,8 @@ async function searchDatabase() {
                   </div>
                 </div>
               </div>
-              <hr>
             </div>
+            <hr>
           `;
         }
       });
