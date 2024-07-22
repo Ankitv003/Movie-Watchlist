@@ -184,7 +184,7 @@ h1 {
 .remove-watchlist {
   align-items: center;
   gap: 0.25em;
-  border: 2px solid wheat;
+
   flex: 1;
   justify-content: center;
 }
@@ -198,6 +198,7 @@ h1 {
   font-size: 1.25rem;
   flex: 1;
   cursor: pointer;
+  border: 2px solid wheat;
 }
 .add-watchlist button:hover,
 .add-watchlist button:focus-visible,
@@ -271,7 +272,6 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
   }
   .movie-list-contents {
     flex-direction: row;
@@ -280,6 +280,7 @@ hr {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 50%;
   }
   .movie-poster img {
     max-width: 100%;
@@ -293,18 +294,20 @@ hr {
     flex-direction: column;
   }
   .movie-name {
-    justify-content: space-around;
+    justify-content: unset;
+    gap: 5em;
   }
-
-  .movie-poster {
-    width: 50%;
-  }
-  .movie-list-container {
-    width: 50%;
+  .movie-details {
+    gap: 5em;
+    justify-content: unset;
   }
 
   .add-watchlist-btn {
     width: 80%;
+  }
+  .movie-about {
+    width: 50%;
+    margin: 0;
   }
   .search-box {
     width: 60%;
@@ -320,5 +323,8 @@ hr {
   }
   .search-btn {
     width: 20%;
+  }
+  .remove-watchlist {
+    margin-right: auto;
   }
 }
