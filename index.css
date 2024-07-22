@@ -267,11 +267,13 @@ hr {
 /* .watch-list div:last-child {
   margin-bottom: 1em;
 } */
-@media (min-width: 600px) {
+@media (min-width: 650px) {
   .movie-item {
     display: flex;
-    justify-content: center;
+    width: 70%;
+    margin: 0 auto;
     align-items: center;
+    gap: 2em;
   }
   .movie-list-contents {
     flex-direction: row;
@@ -303,10 +305,10 @@ hr {
   }
 
   .add-watchlist-btn {
-    width: 80%;
+    width: 100%;
   }
   .movie-about {
-    width: 50%;
+    width: 70%;
     margin: 0;
   }
   .search-box {
@@ -324,7 +326,32 @@ hr {
   .search-btn {
     width: 20%;
   }
-  .remove-watchlist {
+  .remove-watchlist,
+  .add-watchlist {
     margin-right: auto;
+  }
+  .add-watchlist {
+    width: 70%;
+  }
+  hr {
+    margin: 2em auto;
+    width: 70%;
+  }
+}
+@media (min-width: 651px) and (max-width: 950px) {
+  .movie-item {
+    gap: 2em;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .movie-about {
+    width: 80%;
+    margin: 0;
+  }
+  .add-watchlist {
+    width: 80%;
+  }
+  hr {
+    width: 90%;
   }
 }
