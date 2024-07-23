@@ -158,6 +158,8 @@ h1 {
 .movie-name h3 {
   /* margin-right: 0.5em; */
   margin-bottom: 0;
+  font-size: 2rem;
+  color: gold;
 }
 
 .movie-rating {
@@ -210,6 +212,7 @@ h1 {
 .movie-about {
   flex-direction: column;
   align-items: center;
+  color: #a5a5a5;
 }
 hr {
   margin: 2em 0;
