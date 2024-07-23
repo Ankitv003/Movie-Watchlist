@@ -250,7 +250,10 @@ hr {
 .watch-list hr:last-child {
   display: none;
 }
-
+.movie-list-contents {
+  width: 100%;
+  margin: 0 auto;
+}
 .movie-list hr:last-child {
   display: none;
 }
@@ -264,9 +267,18 @@ hr {
   padding: 2em;
 } */
 
-/* .watch-list div:last-child {
+.movie-list div:last-child {
   margin-bottom: 1em;
-} */
+  margin-top: 1em;
+}
+.watch-list > .movie-item {
+  padding-bottom: 1em;
+  margin: 2em auto;
+  border-bottom: 2px solid white;
+}
+.watch-list > .movie-item:last-child {
+  border-bottom: none;
+}
 @media (min-width: 650px) {
   .movie-item {
     display: flex;

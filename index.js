@@ -13,7 +13,7 @@ inputEl.addEventListener("keyup", function (event) {
   }
 });
 async function searchDatabase() {
-  console.log(inputEl.value);
+  // console.log(inputEl.value);
 
   try {
     loader.style.display = "flex"; // Show loader
@@ -44,7 +44,7 @@ async function searchDatabase() {
           movieData.Plot !== "N/A"
         ) {
           anyMovieDisplayed = true; // Set flag to true if a movie is displayed
-          console.log(movieData);
+          // console.log(movieData);
           movieList.innerHTML += `
              <div class="movie-item" data-id="${movieData.imdbID}">
                <div class="movie-poster">
@@ -116,7 +116,7 @@ function addToWatchlist(event) {
   ).innerText;
   const moviePlot = movieItem.querySelector(".movie-about p").innerText;
 
-  console.log(`Adding to watchlist: ${movieTitle}`);
+  // console.log(`Adding to watchlist: ${movieTitle}`);
 
   // Add the movie to the watchlist (you can store it in localStorage or send it to a backend server)
   let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];

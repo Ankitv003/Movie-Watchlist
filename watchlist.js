@@ -47,9 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
               </div>
             </div>
           </div>
-      
+          <hr>
         </div>
-            <hr>
+
       `;
     });
 
